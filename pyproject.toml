@@ -6,7 +6,7 @@ name = "ai-agents"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "José Cruz",email = "jose.garrido@g.globo"}
+    {name = "José Cruz",email = "josercgarrido@hotmail.com"}
 ]
 readme = "README.md"
 requires-python = "3.13.3"
