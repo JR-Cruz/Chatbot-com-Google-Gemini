@@ -1,15 +1,30 @@
 # 🤖 Meu Chatbot com Gemini
 
-Este é um projeto que desenvolvi para explorar o universo de **Agentes de IA** e **Python**. A ideia aqui foi criar um chatbot funcional que roda direto no terminal, conectado à API do Google Gemini.
+![Python](https://img.shields.io/badge/python-3.13+-blue.svg)
+![Poetry](https://img.shields.io/badge/poetry-package_manager-blueviolet)
+![Gemini](https://img.shields.io/badge/Google%20AI-Gemini%20Flash-orange)
 
-Focada em boas práticas, a estrutura do projeto já usa **Poetry** para não virar bagunça com dependências e variáveis de ambiente para segurança.
+Este é um projeto que desenvolvi para explorar o universo de **Agentes de IA** e **Python**. A ideia aqui foi criar um chatbot funcional que roda direto no terminal (CLI), conectado à API do Google Gemini.
+
+Focada em boas práticas, a estrutura do projeto já usa **Poetry** organizando com dependências e variáveis de ambiente para segurança.
 
 ## 🛠 O que usei aqui?
 
-* **Python 3.13+**: Linguagem base.
-* **Google Generative AI (Gemini 2.5 Flash)**
-* **Poetry**: Para gerenciar os pacotes e ambientes virtuais.
-* **Python-dotenv**: Pra esconder a API Key e não subir senha no GitHub.
+* **[Python 3.13+](https://www.python.org/)**: Linguagem base.
+* **[Google Generative AI](https://ai.google.dev/)**: Modelo `gemini-2.5-flash`.
+* **[Poetry](https://python-poetry.org/)**: Para gerenciar os pacotes e ambientes virtuais.
+* **[Python-dotenv](https://pypi.org/project/python-dotenv/)**: Pra esconder a API Key e não subir senha no GitHub.
+
+## 📂 Estrutura do Projeto
+
+```text
+ai-agents/
+├── app.py             # O código principal do chatbot
+├── teste_modelos.py   # Script extra para listar modelos disponíveis
+├── pyproject.toml     # Onde o Poetry guarda as configurações
+├── .env               # Suas chaves secretas (fica no seu PC, não sobe pro Git)
+└── README.md          # Este arquivo que você está lendo
+```
 
 ## 🚀 Como rodar na sua máquina
 
@@ -20,17 +35,21 @@ Se você quiser testar ou usar como base, segue o passo a passo:
 git clone [https://github.com/SEU-USUARIO/ai-agents.git](https://github.com/SEU-USUARIO/ai-agents.git)
 cd ai-agents
 ```
+
 ### 2. Instale as dependências
-Como estou usando o Poetry, ele resolve tudo com um comando só:
+Como estou usando o Poetry:
 ```bash
 poetry install
 ```
+
 ### 3. A parte da Segurança (API Key) 🔐
+
 Eu não deixei minha chave exposta no código (assim como você não deve fazer).
 
-Crie um arquivo chamado .env na raiz do projeto (olha o .gitignore pra ver que ele é ignorado pelo Git).
+Crie um arquivo chamado .env na raiz do projeto.
 
 Cole sua chave do Google AI Studio lá dentro assim:
+
 ```bash
 GENAI_API_KEY="SUA_CHAVE_AQUI"
 ```
@@ -47,5 +66,5 @@ Também deixei um script chamado teste_modelos.py. Fiz ele para listar quais ver
 ```bash
 poetry run python teste_modelos.py
 ```
-
-Desenvolvido por José Cruz 👨‍💻 Estudando Engenharia de Software e explorando IA.
+##
+### Desenvolvido por José Cruz 👨‍💻 Estudando Engenharia de Software e explorando IA.
